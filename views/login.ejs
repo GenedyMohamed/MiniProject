@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<title>Login page</title>
+</head>
+<script type="text/javascript">
+function display(form){
+if (form.username.value=="root") { 
+		if (form.password.value=="root") {              
+										location="/" 
+										Session["username"] =form.username.value
+											} else {
+													alert("Invalid Password")
+													}
+								} else {  alert("Invalid Username")
+										}
+						}
+			</script>			
+<body >
+
+<form >
+<div>Username</div>
+<br>
+<input type="text" name="username" /><br><br>
+<div>Password</div>
+<br>
+<input type="password" name="password"/><br><br>
+<input type="button" value="Login" onClick="display(this.form)"/>
+
+</form>
+
+</body>
+</html>
