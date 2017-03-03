@@ -4,8 +4,6 @@ let session = require('express-session');
 let loginController = {
     
     getLoginFields:function(req, res){
-        var sess = req.session;
-        sess = req.body.username;
         Users.find(function(err, users){
             if(err){
                 res.send(err.message);
@@ -14,11 +12,30 @@ let loginController = {
                 res.render('login', {users});
             }
         });
-        console.log(sess);
     },
 
     checkLoginFields:function(req,res){
-        res.redirect('/');
+        Users.find(function(err, users){
+            if(err){
+                res.send(err.message);
+            }
+            else{
+                var j = 0;
+                for (var i = 0; i<users.length; i++){
+                    if (users[i].username==req.body.username && users[i].password==req.body.password){
+                                    j = 1;
+                                session.username = users[i].username; //savng session
+                                console.log(session.username); //betala3 esm el user
+                                res.redirect('/');
+
+                    }
+                }
+            }
+            if (j == 0)
+            res.render('login',{req});
+        });
+
+        
     },
 
     createPortofolio:function(req, res){

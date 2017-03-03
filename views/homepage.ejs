@@ -106,8 +106,9 @@
             <div class="row">
                 <% for(var i=0; i<portofolios.length; i++){%>
                     <div class="card col-xs-4">
-                        <h4 class="card-title"> <%= portofolios[i].student_username %></h4>
-                        <a href="<%= portofolios[i].student_username %>" class="btn btn-primary card-link">Visit Website</a>
+                        <h4 class="card-title"> <%= portofolios[i].Title %></h4>
+                        <div class="card-title"> <%= portofolios[i].student_username %></div>
+                        <a href="<%= portofolios[i].works %>" class="btn btn-primary card-link">Visit Works</a>
                     </div>
                 <% } %>
 
@@ -119,19 +120,27 @@
                 <form class="form" method="POST" action="/homepage">
                     <div class="form-group">
                         <label for="InputTitle">Title</label>
-                        <input name = "title" type="text" class="form-control" id="InputTitle" placeholder="Title">
+                        <input name = "title" type="long-text" class="form-control" id="InputTitle" placeholder="Title">
                     </div>
                     <div class="form-group">
                         <label for="InputProfileLink">Profile Picture Link</label>
-                        <input name = "URL" type="url" class="form-control" id="InputProfileLink" placeholder="Link">
+                        <input name = "pp" type="long-text" class="form-control" id="InputProfileLink" placeholder="Link">
                     </div>
                     <div class="form-group">
                         <label for="InputWorksLink">Works Link</label>
-                        <input name = "URL" type="url" class="form-control" id="InputWorksLink" placeholder="Link">
+                        <input name = "w" type="long-text" class="form-control" id="InputWorksLink" placeholder="Link">
                     </div>
                     <div class="form-group">
                         <label for="InputScreenshotsLink">Works Screenshots Link</label>
-                        <input name = "URL" type="url" class="form-control" id="InputScreenshotsLink" placeholder="Link">
+                        <input name = "ss" type="long-text" class="form-control" id="InputScreenshotsLink" placeholder="Link">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputreposLink">Repos Link</label>
+                        <input name = "r" type="long-text" class="form-control" id="InputReposLink" placeholder="Link">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputreposLink">Name</label>
+                        <input name = "name" type="long-text" class="form-control" id="InputReposLink" placeholder="Link">
                     </div>
                     <button type="submit" class="btn btn-default"  action="/homepage">Submit</button>
                 </form>

@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var portofolioSchema = mongoose.Schema({
     student_username:{
         type:String, 
-        ref: 'Users',
+ //       ref: 'Users',
         required:true, 
         unique:true,
 
@@ -13,6 +13,9 @@ var portofolioSchema = mongoose.Schema({
     },
     profilePicture:{
     	type:String,
+    },
+    works:{
+        type:String,
     }
 })
 
