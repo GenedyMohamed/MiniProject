@@ -2,19 +2,22 @@ var mongoose = require('mongoose');
 
 var userSchema = mongoose.Schema({
     screenshots:{
-        type:Image,
+        type:String
     },
     links:{
-    	type:String,
+    	type:String
     },
     repos:{
         type:String
     },
     student_username:{
-        type:String
+        type:String, 
+   //     ref: 'Users',
+        required:true, 
+        unique:true
     }
 })
 
-var Users = mongoose.model("user", userSchema);
+var Works = mongoose.model("work", userSchema);
 
-module.exports = Users;
+module.exports = Works;

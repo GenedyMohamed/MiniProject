@@ -1,8 +1,11 @@
 let Users = require('../models/Users');
+let session = require('express-session');
 
 let loginController = {
     
     getLoginFields:function(req, res){
+        var sess = req.session;
+        sess = req.body.username;
         Users.find(function(err, users){
             if(err){
                 res.send(err.message);
@@ -11,6 +14,11 @@ let loginController = {
                 res.render('login', {users});
             }
         });
+        console.log(sess);
+    },
+
+    checkLoginFields:function(req,res){
+        res.redirect('/');
     },
 
     createPortofolio:function(req, res){

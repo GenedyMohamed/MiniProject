@@ -8,23 +8,16 @@ var portofolioSchema = mongoose.Schema({
         unique:true,
 
     },
+    Title:{
+        type:String
+    },
     profilePicture:{
-    	type:Image,
-    },
-    works:[{
-    links:{
-    	type:String,
-    },
-    screenshots:{
     	type:String,
     }
-	},
-    required=true
-    ]
 })
 
 var workSchema = mongoose.Schema()
 
-var Project = mongoose.model("portofolio", portofolioSchema);
+var Portofolios = mongoose.model("portofolio", portofolioSchema);
 
 module.exports = Portofolios;

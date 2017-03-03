@@ -1,35 +1,25 @@
-let Users = require('../models/Users');
-
+let Portofolios = require('../models/Portofolios');
+let Works = require('../models/Works')
 let homepageController = {
     
     getAllPortofolios:function(req, res){
-        Users.find(function(err, users){
+        Portofolios.find(function(err, portofolios){
             if(err){
                 res.send(err.message);
             }
             else{
-                res.render('homepage', {users});
+                res.render('homepage', {portofolios});
             }
         });
-        
-        var session = req.session;
-        console.log(session);
-    },
+        },
 
     createPortofolio:function(req, res){
-        //let Portofolio = new Portofolio(req.body);
-
-        // Portofolio.save(function(err, portofolio){
-        //     if(err){
-        //         res.send(err.message)
-        //         console.log(err);
-        //     }
-        //     else{
-
-        //         console.log(portofolio);
-                res.redirect('/register');
-        //    }
-        //})
+        var x = new Portofolios();
+        var y = new Works();
+        x.student_username = "session_username";
+        x.Title = req.body.InputTitle;
+        x.profilePicture = req.body.InputProfileLink;
+        
     }
 }
 
