@@ -4,7 +4,7 @@
   "description": "Mini MEAN Stack SE Project",
   "main": "main.js",
   "scripts": {
-    "start":"node main.js",
+    "start": "node main.js",
     "test": "test"
   },
   "keywords": [
@@ -17,19 +17,20 @@
   "author": "Mohamed Genedy",
   "license": "ISC",
   "dependencies": {
+    "@risingstack/trace": "^3.5.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.6",
     "express-session": "^1.15.1",
     "mongoose": "^4.8.5",
     "passport": "^0.3.2"
   },
-    "_id": "heroku_9c37jmpf.root",
-    "user": "root",
-    "db": "heroku_9c37jmpf",
-    "roles": [
-        {
-            "role": "dbOwner",
-            "db": "heroku_9c37jmpf"
-        }
-    ]
+  "_id": "heroku_9c37jmpf.root",
+  "user": "root",
+  "db": "heroku_9c37jmpf",
+  "roles": [
+    {
+      "role": "dbOwner",
+      "db": "heroku_9c37jmpf"
+    }
+  ]
 }

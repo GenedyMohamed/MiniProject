@@ -1,5 +1,6 @@
 
 //require depenciess
+require('@risingstack/trace')
 var express = require('express');
 var router = require('./app/routes');
 var bodyParser = require('body-parser');
