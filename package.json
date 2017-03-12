@@ -4,6 +4,7 @@
   "description": "Mini MEAN Stack SE Project",
   "main": "main.js",
   "scripts": {
+    "start":"node main.js"
     "test": "test"
   },
   "keywords": [
