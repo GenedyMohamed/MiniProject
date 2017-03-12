@@ -16,7 +16,7 @@ let homepageController = {
         },
 
     createPortofolio:function(req, res){
-        console.log(session.username); // mesh betala3 esm el user, betala3 undefined
+        console.log(session.username);
         if (session.username){
         var x = new Portofolios();
         var y = new Works();

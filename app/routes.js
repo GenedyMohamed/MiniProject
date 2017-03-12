@@ -12,6 +12,9 @@ router.get('/login', loginController.getLoginFields);
 router.get('/register', function(req,res){
     res.render('register')
 });
+router.get('/portofolio', function(req,res){
+    res.render('portofolio')
+})
 
 router.post('/homepage', homepageController.createPortofolio);
 router.post('/register', registerController.getRegisterFields);
