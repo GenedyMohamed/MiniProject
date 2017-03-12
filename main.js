@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname+ '/public'));
 
 // mongoose.connect(DB_URI);
-// app.use(router);
+ app.use(router);
 // app.use(cookieParser());
 // app.use(session({secret: "Shh, its a secret!"}));
 
