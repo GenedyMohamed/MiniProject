@@ -9,6 +9,7 @@ var cookieParser = require('cookie-parser');
 var sessions = require('express-session');
 var session = require('client-sessions');
 var app = express();
+var port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 
@@ -30,6 +31,6 @@ app.use(session({
 
 // start the server
 
-app.listen(8080, function(){
+app.listen(port, function(){
     console.log("server is listening on port 8080");
 })
