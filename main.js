@@ -18,6 +18,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname+ '/public'));
 
  mongoose.connect(DB_URI);
+  mongoose.connect("mongodb://root:root@ds061620.mlab.com:61620/heroku_9c37jmpf");
  app.use(router);
 // app.use(cookieParser());
 // app.use(session({secret: "Shh, its a secret!"}));

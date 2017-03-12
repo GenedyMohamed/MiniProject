@@ -22,5 +22,14 @@
     "express-session": "^1.15.1",
     "mongoose": "^4.8.5",
     "passport": "^0.3.2"
-  }
+  },
+    "_id": "heroku_9c37jmpf.root",
+    "user": "root",
+    "db": "heroku_9c37jmpf",
+    "roles": [
+        {
+            "role": "dbOwner",
+            "db": "heroku_9c37jmpf"
+        }
+    ]
 }
